@@ -3,104 +3,243 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Шерали Рахимов — Футболист</title>
+<title>Исраилов Расул — футболист сборной Таджикистана</title>
+<meta name="description" content="Официальный сайт Исраилова Расула — 18-летнего нападающего из Таджикистана. История пути, статистика, достижения.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="navbar">
-  <div class="logo">ШР <span>10</span></div>
-  <nav>
+<!-- ПРЕЛОАДЕР -->
+<div class="preloader" id="preloader">
+  <div class="loader-ball"></div>
+  <p>Выходим на поле…</p>
+</div>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- НАВИГАЦИЯ -->
+<header class="navbar" id="navbar">
+  <a href="#hero" class="logo">ИР<span>10</span></a>
+  <nav class="nav-links" id="navLinks">
     <a href="#about">Обо мне</a>
+    <a href="#story">Мой путь</a>
     <a href="#stats">Статистика</a>
     <a href="#achievements">Достижения</a>
     <a href="#gallery">Галерея</a>
-    <a href="#contact">Контакты</a>
+    <a href="#contact" class="nav-cta">Связаться</a>
   </nav>
+  <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
 </header>
 
-<section class="hero" id="about">
-  <div class="hero-content">
-    <p class="hero-tag">Нападающий &middot; Сборная Таджикистана</p>
-    <h1>Шерали Рахимов</h1>
-    <p class="hero-desc">18 лет. Один из самых перспективных и популярных молодых футболистов Таджикистана.
-       Скорость, техника и голевое чутьё — моё оружие на поле.</p>
-    <div class="hero-buttons">
-      <a href="#stats" class="btn btn-primary">Моя статистика</a>
-      <a href="#contact" class="btn btn-outline">Связаться</a>
+<!-- ГЛАВНЫЙ ЭКРАН -->
+<section class="hero" id="hero">
+  <img src="images/hero-stadium.svg" alt="Стадион под светом прожекторов" class="hero-bg">
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <p class="hero-tag reveal">Нападающий · №10 · Таджикистан 🇹🇯</p>
+    <h1 class="hero-name reveal">
+      <span class="line">Исраилов</span>
+      <span class="line accent">Расул</span>
+    </h1>
+    <p class="hero-desc reveal">
+      18 лет. Начинал во дворе с мячом, перемотанным скотчем, —
+      сегодня выхожу на поле под свет прожекторов.
+      Это история о том, как из ничего можно сделать всё.
+    </p>
+    <div class="hero-buttons reveal">
+      <a href="#story" class="btn btn-primary">Моя история</a>
+      <a href="#stats" class="btn btn-ghost">Статистика</a>
+    </div>
+    <div class="hero-quickstats reveal">
+      <div><b>22</b><span>гола за сезон</span></div>
+      <div><b>27</b><span>матчей</span></div>
+      <div><b>11</b><span>ассистов</span></div>
     </div>
   </div>
-  <div class="hero-photo">
-    <div class="photo-circle">⚽</div>
+  <a href="#about" class="scroll-hint" aria-label="Листай вниз"><span></span></a>
+</section>
+
+<!-- БЕГУЩАЯ СТРОКА -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>СКОРОСТЬ</span><i>●</i><span>ТЕХНИКА</span><i>●</i><span>ХАРАКТЕР</span><i>●</i>
+    <span>ГОЛЫ</span><i>●</i><span>ДИСЦИПЛИНА</span><i>●</i><span>ТАДЖИКИСТАН</span><i>●</i>
+    <span>СКОРОСТЬ</span><i>●</i><span>ТЕХНИКА</span><i>●</i><span>ХАРАКТЕР</span><i>●</i>
+    <span>ГОЛЫ</span><i>●</i><span>ДИСЦИПЛИНА</span><i>●</i><span>ТАДЖИКИСТАН</span><i>●</i>
+  </div>
+</div>
+
+<!-- ОБО МНЕ -->
+<section class="about" id="about">
+  <div class="section-head reveal">
+    <span class="eyebrow">01 — Знакомство</span>
+    <h2>Обо мне</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-photo reveal">
+      <img src="images/portrait.svg" alt="Исраилов Расул">
+      <div class="photo-badge"><b>№10</b><span>Нападающий</span></div>
+    </div>
+    <div class="about-text reveal">
+      <p class="lead">Меня зовут Расул Исраилов. Мне 18 лет, и футбол — это не то,
+      чем я занимаюсь. Это то, кем я являюсь.</p>
+      <p>Я вырос в обычном районе, где поле было из утоптанной земли, а воротами
+      служили два кирпича. Никто не давал мне шанс — я забирал его сам. Каждое утро
+      до школы, каждый вечер после. Пока другие спали, я отрабатывал удар в стенку.</p>
+      <p>Сегодня я выступаю в высшем дивизионе Таджикистана и ношу номер 10.
+      Но для меня главное не цифры в протоколе, а то, что мальчишки из таких же
+      дворов, как мой, смотрят и верят: получится и у них.</p>
+
+      <div class="facts">
+        <div class="fact"><span>Возраст</span><b>18 лет</b></div>
+        <div class="fact"><span>Позиция</span><b>Нападающий</b></div>
+        <div class="fact"><span>Рост</span><b>178 см</b></div>
+        <div class="fact"><span>Вес</span><b>70 кг</b></div>
+        <div class="fact"><span>Нога</span><b>Правая</b></div>
+        <div class="fact"><span>Страна</span><b>Таджикистан</b></div>
+      </div>
+    </div>
   </div>
 </section>
 
+<!-- МОЙ ПУТЬ -->
+<section class="story" id="story">
+  <div class="section-head reveal">
+    <span class="eyebrow">02 — Путь с нуля</span>
+    <h2>Мой путь</h2>
+    <p class="section-sub">Три главы, которые сделали меня тем, кто я есть.</p>
+  </div>
+
+  <article class="chapter reveal">
+    <div class="chapter-img"><img src="images/g-yard.svg" alt="Двор, где всё начиналось"><span class="chapter-num">01</span></div>
+    <div class="chapter-text">
+      <h3>Двор, кирпичи вместо ворот</h3>
+      <p>Мне было шесть, когда старший брат вынес во двор старый мяч. Он был
+      тяжёлый, с ободранным боком, и после дождя становился как камень.
+      Мы играли до темноты — пока мамы не начинали кричать из окон.</p>
+      <p>У меня не было бутс. Первые два года я играл в кедах, которые были
+      на размер больше, и набивал в носок газету, чтобы нога не болталась.
+      Тогда я думал, что это нормально. Сейчас понимаю — именно там я научился
+      работать с мячом на плохом покрытии. Асфальт не прощает лишнего касания.</p>
+      <blockquote>«Если ты научился обводить на разбитом асфальте — на газоне тебе будет легко.»</blockquote>
+    </div>
+  </article>
+
+  <article class="chapter reverse reveal">
+    <div class="chapter-img"><img src="images/g-injury.svg" alt="Травма и восстановление"><span class="chapter-num">02</span></div>
+    <div class="chapter-text">
+      <h3>Отказы, травма и сомнения</h3>
+      <p>В 12 лет меня не взяли в футбольную школу. Тренер посмотрел на меня
+      минуту и сказал: «Слишком мелкий, слишком худой. Приходи через год».
+      Я пришёл через год. Он снова сказал «нет». Я пришёл и на третий.</p>
+      <p>В 15 лет — травма колена. Четыре месяца без мяча. Врач говорил
+      осторожно, родители — прямо: «Бросай, займись учёбой, футбол тебя не прокормит».
+      Это были самые тяжёлые месяцы в моей жизни. Я приходил на тренировки просто
+      посидеть на скамейке и посмотреть, потому что без этого не мог.</p>
+      <p>Я вернулся. Медленнее, слабее, но вернулся — и за полгода набрал форму лучше,
+      чем была до травмы. Потому что за эти четыре месяца я понял, чего мне это стоит.</p>
+      <blockquote>«Мне говорили „нет“ столько раз, что я просто перестал слышать это слово.»</blockquote>
+    </div>
+  </article>
+
+  <article class="chapter reveal">
+    <div class="chapter-img"><img src="images/g-goal.svg" alt="Прорыв и первый гол"><span class="chapter-num">03</span></div>
+    <div class="chapter-text">
+      <h3>Прорыв</h3>
+      <p>В 16 меня наконец заметили на районном турнире — я забил четыре мяча
+      в одном матче. Через неделю позвали на просмотр в дубль. Ещё через год
+      я вышел на замену в основе на 78-й минуте и забил свой первый гол
+      на профессиональном уровне.</p>
+      <p>Я до сих пор помню этот звук. Не свой крик — а то, как выдохнули трибуны.
+      После игры ко мне подошёл тот самый тренер, который трижды сказал мне «нет».
+      Он просто пожал руку и ничего не сказал. Мне и не нужно было.</p>
+      <p>Сегодня мне 18. Впереди сборная, еврокубки, большая Европа.
+      Но я никогда не забуду двор, кирпичи и кеды с газетой внутри.</p>
+      <blockquote>«Талант — это то, с чего начинают. Характер — это то, чем заканчивают.»</blockquote>
+    </div>
+  </article>
+</section>
+
+<!-- СТАТИСТИКА -->
 <section class="stats" id="stats">
-  <h2>Статистика сезона</h2>
+  <div class="section-head reveal">
+    <span class="eyebrow">03 — Цифры</span>
+    <h2>Статистика сезона</h2>
+  </div>
   <div class="stats-grid">
-    <div class="stat-card">
-      <span class="stat-number">27</span>
-      <span class="stat-label">Матчей</span>
-    </div>
-    <div class="stat-card">
-      <span class="stat-number">22</span>
-      <span class="stat-label">Голов</span>
-    </div>
-    <div class="stat-card">
-      <span class="stat-number">11</span>
-      <span class="stat-label">Голевых передач</span>
-    </div>
-    <div class="stat-card">
-      <span class="stat-number">18</span>
-      <span class="stat-label">Лет</span>
-    </div>
+    <div class="stat-card reveal"><span class="stat-number" data-target="27">0</span><span class="stat-label">Матчей</span></div>
+    <div class="stat-card reveal"><span class="stat-number" data-target="22">0</span><span class="stat-label">Голов</span></div>
+    <div class="stat-card reveal"><span class="stat-number" data-target="11">0</span><span class="stat-label">Ассистов</span></div>
+    <div class="stat-card reveal"><span class="stat-number" data-target="6">0</span><span class="stat-label">Наград «Игрок матча»</span></div>
+  </div>
+
+  <div class="skills reveal">
+    <h3>Сильные стороны</h3>
+    <div class="skill"><div class="skill-top"><span>Скорость</span><b>94</b></div><div class="bar"><i data-val="94"></i></div></div>
+    <div class="skill"><div class="skill-top"><span>Завершение</span><b>89</b></div><div class="bar"><i data-val="89"></i></div></div>
+    <div class="skill"><div class="skill-top"><span>Дриблинг</span><b>91</b></div><div class="bar"><i data-val="91"></i></div></div>
+    <div class="skill"><div class="skill-top"><span>Пас</span><b>82</b></div><div class="bar"><i data-val="82"></i></div></div>
+    <div class="skill"><div class="skill-top"><span>Характер</span><b>99</b></div><div class="bar"><i data-val="99"></i></div></div>
   </div>
 </section>
 
+<!-- ДОСТИЖЕНИЯ -->
 <section class="achievements" id="achievements">
-  <h2>Достижения</h2>
+  <div class="section-head reveal">
+    <span class="eyebrow">04 — Трофеи</span>
+    <h2>Достижения</h2>
+  </div>
   <div class="timeline">
-    <div class="timeline-item">
-      <span class="year">2024</span>
-      <p>Лучший бомбардир Высшей лиги Таджикистана</p>
-    </div>
-    <div class="timeline-item">
-      <span class="year">2024</span>
-      <p>Вызван в национальную сборную Таджикистана</p>
-    </div>
-    <div class="timeline-item">
-      <span class="year">2023</span>
-      <p>Чемпион молодёжной лиги</p>
-    </div>
-    <div class="timeline-item">
-      <span class="year">2023</span>
-      <p>MVP турнира среди юношей до 18 лет</p>
-    </div>
+    <div class="timeline-item reveal"><span class="year">2026</span><h4>Лучший бомбардир Высшей лиги</h4><p>22 гола в 27 матчах — лучший результат сезона.</p></div>
+    <div class="timeline-item reveal"><span class="year">2025</span><h4>Дебют за сборную Таджикистана</h4><p>Первый вызов в национальную команду в 18 лет.</p></div>
+    <div class="timeline-item reveal"><span class="year">2025</span><h4>Открытие сезона</h4><p>Признан лучшим молодым игроком чемпионата.</p></div>
+    <div class="timeline-item reveal"><span class="year">2024</span><h4>Первый профессиональный гол</h4><p>Выход на замену и гол на 84-й минуте.</p></div>
+    <div class="timeline-item reveal"><span class="year">2023</span><h4>MVP юношеского турнира U-18</h4><p>Тот самый турнир, после которого всё изменилось.</p></div>
   </div>
 </section>
 
+<!-- ГАЛЕРЕЯ -->
 <section class="gallery" id="gallery">
-  <h2>Галерея</h2>
+  <div class="section-head reveal">
+    <span class="eyebrow">05 — Моменты</span>
+    <h2>Галерея</h2>
+  </div>
   <div class="gallery-grid">
-    <div class="gallery-item">⚽ Матч дня</div>
-    <div class="gallery-item">🏆 Награждение</div>
-    <div class="gallery-item">🔥 Тренировка</div>
-    <div class="gallery-item">🇹🇯 Сборная</div>
+    <figure class="gallery-item wide reveal"><img src="images/g-goal.svg" alt="Гол"><figcaption>Гол в ворота лидера чемпионата</figcaption></figure>
+    <figure class="gallery-item reveal"><img src="images/g-trophy.svg" alt="Трофей"><figcaption>Награждение по итогам сезона</figcaption></figure>
+    <figure class="gallery-item reveal"><img src="images/g-training.svg" alt="Тренировка"><figcaption>Утренняя тренировка</figcaption></figure>
+    <figure class="gallery-item reveal"><img src="images/g-boots.svg" alt="Бутсы"><figcaption>Первые настоящие бутсы</figcaption></figure>
+    <figure class="gallery-item wide reveal"><img src="images/g-national.svg" alt="Сборная"><figcaption>В составе сборной Таджикистана</figcaption></figure>
   </div>
 </section>
 
+<!-- ЦИТАТА -->
+<section class="bigquote reveal">
+  <p>«Меня не взяли трижды. Я пришёл в четвёртый раз — и забил четыре.»</p>
+  <span>— Расул Исраилов</span>
+</section>
+
+<!-- КОНТАКТЫ -->
 <section class="contact" id="contact">
-  <h2>Связаться со мной</h2>
-  <p>По вопросам сотрудничества, интервью и спонсорства — пишите!</p>
-  <div class="contact-links">
-    <a href="mailto:contact@example.com">📧 Email</a>
-    <a href="#">📷 Instagram</a>
-    <a href="#">🎵 TikTok</a>
+  <div class="section-head reveal">
+    <span class="eyebrow">06 — Контакты</span>
+    <h2>Связаться со мной</h2>
+    <p class="section-sub">Сотрудничество, интервью, спонсорство и предложения от клубов.</p>
+  </div>
+  <div class="contact-links reveal">
+    <a href="mailto:irasik2211@gmail.com"><b>Email</b><span>irasik2211@gmail.com</span></a>
+    <a href="#"><b>Instagram</b><span>@israilov.rasul</span></a>
+    <a href="#"><b>TikTok</b><span>@rasul10</span></a>
+    <a href="#"><b>Telegram</b><span>@rasul10</span></a>
   </div>
 </section>
 
 <footer>
-  <p>&copy; 2026 Шерали Рахимов. Тестовый сайт-визитка.</p>
+  <div class="footer-logo">ИР<span>10</span></div>
+  <p>© 2026 Исраилов Расул · Таджикистан 🇹🇯</p>
 </footer>
 
 <script src="script.js"></script>
